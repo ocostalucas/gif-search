@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:gif_search/screens/gif.dart';
 import 'package:http/http.dart' as http;
 
 import 'dart:convert';
 import 'dart:async';
+
+import 'package:share/share.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   Future<Map> _getGifs() async {
     http.Response response;
 
-    if (_search == null)
+    if (_search == null || _search.isEmpty)
       response = await http.get(
           "https://api.giphy.com/v1/gifs/trending?api_key=rMn2J0dpzWrp2zgjglVD8D6dWAsBTtCE&limit=20&rating=G");
     else
@@ -109,9 +113,19 @@ class _HomePageState extends State<HomePage> {
       itemCount: getCount(snapshot.data["data"]),
       itemBuilder: (context, index){
         if(_search == null || index < snapshot.data["data"].length){
-          return GestureDetector(child: Image.network(snapshot.data["data"][index]["images"]["fixed_height"]["url"],
-            height: 300.0,
-            fit: BoxFit.cover,),
+          return GestureDetector(
+            child: FadeInImage.memoryNetwork(
+              placeholder: kTransparentImage, 
+              image: snapshot.data["data"][index]["images"]["fixed_height"]["url"],
+              height: 300.0,
+              fit: BoxFit.cover,),
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => GifPage(snapshot.data["data"][index]))
+            );
+            },
+            onLongPress: (){
+              Share.share(snapshot.data["data"][index]["images"]["fixed_height"]["url"]);
+            },
           );
         } else {
           return Container(
