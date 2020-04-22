@@ -1,16 +1,25 @@
-# gif_search
+## :iphone: GIF Search
 
-A new Flutter project.
+The **GIF Search** application created with Flutter, for for searching and sharing gifs using the [GIPHY Developer API](https://developers.giphy.com/).
 
-## Getting Started
+<h1 align="center">
+    <img alt="Template" src="./assets/gif-search.gif" width="350px" />
+</h1>
+ 
+## :books: Learned concepts
+- [ProgressIndicator](https://api.flutter.dev/flutter/material/ProgressIndicator-class.html) 
+- [Navigation](https://flutter.dev/docs/cookbook/navigation)
+- [GridView](https://api.flutter.dev/flutter/widgets/GridView-class.html) 
+- [Display Image from network](https://flutter.dev/docs/cookbook/images/network-image)
+- [GestureDetector](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html)
+- [Share](https://pub.dev/packages/share)
+- [Fade in images](https://flutter.dev/docs/cookbook/images/fading-in-images)
 
-This project is a starting point for a Flutter application.
+## :recycle: How to contribute  
+- Fork this repository
+- Create a branch with your feature: `git checkout -b my-feature`
+- Commit your changes: `git commit -m 'feat: My new feature'`
+- Push your branch: `git push origin my-feature`
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## :memo: License  
+This project is under the MIT license. See the [LICENSE](LICENSE)  for more information.
