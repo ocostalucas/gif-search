@@ -1,9 +1,9 @@
 ## :iphone: GIF Search
 
-The **GIF Search** application created with Flutter, for for searching and sharing gifs using the [GIPHY Developer API](https://developers.giphy.com/).
+The **GIF Search** application created with Flutter, for searching and sharing gifs using the [GIPHY Developer API](https://developers.giphy.com/).
 
 <h1 align="center">
-    <img alt="Template" src="./assets/gif-search.gif" width="350px" />
+    <img alt="Template" src="./assets/gif-search.gif" width="300px" />
 </h1>
  
 ## :books: Learned concepts
